@@ -1,0 +1,81 @@
+configuration {
+show-icons: true;
+font: "JetBrainsMono Nerd Font 10";
+drun-display-format: "{icon} {name}";
+}
+
+@theme "~/.config/rofi/theme.rasi"
+
+// Main
+
+window{
+    fullscreen:                  false;
+    transparency:                "real";
+    width:                       100%;
+    border-color:                transparent;
+    transparency:                "real";
+    background-color:            #00000077;
+}
+
+mainbox {
+    orientation:                 horizontal;
+    children:                    [ "dummy", "frame", "dummy" ];
+    background-color:           transparent;
+}
+frame {
+    children:                    ["inputbar", "listview" ];
+    background-color:            transparent;
+}
+
+inputbar {
+enabled: false;
+}
+
+// Lists //
+listview {
+    enabled:                     true;
+    layout:                      vertical;
+    spacing:                     5em;
+    padding:                     4em;
+    columns:                     4;
+    lines:                       1;
+    dynamic:                     false;
+    fixed-height:                true;
+    fixed-columns:               true;
+    reverse:                     false;
+    background-color:            transparent;
+    text-color:                  @main-fg;
+}
+dummy {
+    width:                       2em;
+    expand:                      false;
+    background-color:            transparent;
+}
+
+element {
+  orientation: vertical;
+  spacing: 0px;
+  padding: 0px;
+  background-color: transparent;
+  border-radius: 2em;
+}
+
+element selected {  
+  background-color: @select-bg;
+  border-radius: 2em;
+}
+
+element-icon {
+  size: 26.5em;
+  border-radius: 2em 2em 0 0;
+  margin: 0;
+  padding: 0;
+}
+
+element-text {
+  padding: 1em;  
+  background-color: transparent;
+  horizontal-align: 0.5;
+  vertical-align: 0.5;
+  text-color:@main-fg;
+}
