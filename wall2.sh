@@ -128,14 +128,14 @@ if [ -f "$selected_path" ]; then
         dunstify -i ~/.cache/wall -u low "Wallpaper Changed" "Wallpaper set to $(basename "$selected_path")"
 
 
-        # magick "$selected_path"[0] -strip -resize 1000 -gravity center -extent 1000 -quality 90 "/home/archVaibhav/.cache/wall.thmb"
-        magick "$selected_path"[0] -strip -thumbnail 500x500^ -gravity center -extent 500x500 "/home/archVaibhav/.cache/wall.sqre"
-        magick "$selected_path"[0] -strip -scale 10% -blur 0x3 -resize 100% "/home/archVaibhav/.cache/wall.blur"
-        magick "/home/archVaibhav/.cache/wall.sqre" \
+        # magick "$selected_path"[0] -strip -resize 1000 -gravity center -extent 1000 -quality 90 "$HOME/.cache/wall.thmb"
+        magick "$selected_path"[0] -strip -thumbnail 500x500^ -gravity center -extent 500x500 "$HOME/.cache/wall.sqre"
+        magick "$selected_path"[0] -strip -scale 10% -blur 0x3 -resize 100% "$HOME/.cache/wall.blur"
+        magick "$HOME/.cache/wall.sqre" \
             \( -size 500x500 xc:white \
                 -fill "rgba(0,0,0,0.7)" -draw "polygon 400,500 500,500 500,0 450,0" \
                 -fill black -draw "polygon 500,500 500,0 450,500" \) \
-                -alpha Off -compose CopyOpacity -composite "/home/archVaibhav/.cache/wall.quad.png" && mv "/home/archVaibhav/.cache/wall.quad.png" "/home/archVaibhav/.cache/wall.quad"
+                -alpha Off -compose CopyOpacity -composite "$HOME/.cache/wall.quad.png" && mv "$HOME/.cache/wall.quad.png" "$HOME/.cache/wall.quad"
     else
         killall swww-daemon &>/dev/null
         killall mpvpaper &>/dev/null
@@ -144,13 +144,13 @@ if [ -f "$selected_path" ]; then
         ffmpeg -y -i "$selected_path" -ss 00:00:01.000 -vframes 1 "$HOME/.cache/wall.png" &>/dev/null
         mv "$HOME/.cache/wall.png" "$HOME/.cache/wall"
 
-        magick "$HOME/.cache/wall" -strip -thumbnail 500x500^ -gravity center -extent 500x500 "/home/archVaibhav/.cache/wall.sqre"
-        magick "$HOME/.cache/wall" -strip -scale 10% -blur 0x3 -resize 100% "/home/archVaibhav/.cache/wall.blur" && mv "/home/archVaibhav/.cache/wall.quad.png" "/home/archVaibhav/.cache/wall.quad"
-        magick "/home/archVaibhav/.cache/wall.sqre" \
+        magick "$HOME/.cache/wall" -strip -thumbnail 500x500^ -gravity center -extent 500x500 "$HOME/.cache/wall.sqre"
+        magick "$HOME/.cache/wall" -strip -scale 10% -blur 0x3 -resize 100% "$HOME/.cache/wall.blur" && mv "$HOME/.cache/wall.quad.png" "$HOME/.cache/wall.quad"
+        magick "$HOME/.cache/wall.sqre" \
             \( -size 500x500 xc:white \
                 -fill "rgba(0,0,0,0.7)" -draw "polygon 400,500 500,500 500,0 450,0" \
                 -fill black -draw "polygon 500,500 500,0 450,500" \) \
-                -alpha Off -compose CopyOpacity -composite "/home/archVaibhav/.cache/wall.quad.png" && mv "/home/archVaibhav/.cache/wall.quad.png" "/home/archVaibhav/.cache/wall.quad"
+                -alpha Off -compose CopyOpacity -composite "$HOME/.cache/wall.quad.png" && mv "$HOME/.cache/wall.quad.png" "$HOME/.cache/wall.quad"
 
     fi
 else
