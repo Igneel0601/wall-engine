@@ -8,7 +8,7 @@
 <p align="center"><strong>Dynamic Wallpaper Switcher with Live Wallpaper Support, SDDM Sync & Thumbnail Previews</strong></p>
 
 <p align="center">
-  <img src="./preview.gif" width="700"/>
+  <img src="./preview.gif" width="100%"/>
 </p>
 
 ---
@@ -33,7 +33,7 @@
 ## 🎬 Demo
 
 <p align="center">
-  <video src="./wall-engine-preview.mp4" autoplay loop muted playsinline style="max-width: 90%; border-radius: 10px; box-shadow: 0 0 10px #000;"></video>
+  <video src="./demo.mp4" autoplay loop muted playsinline style="max-width: 90%; border-radius: 10px; box-shadow: 0 0 10px #000;"></video>
 </p>
 
 ---
