@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # Static wallpaper directory
-STATIC_WALLPAPER_DIR="$HOME/.config/hypr/wallpapers/walls-catppuccin-mocha" 
-# Live wallpaper directory (videos/gifs)
+STATIC_WALLPAPER_DIR="$HOME/.config/hypr/wallpapers/walls" 
 LIVE_WALLPAPER_DIR="$HOME/.config/hypr/wallpapers/live-walls"
+sddm_theme=catppuccin-mocha
 
 # Thumbnail cache directory
 THUMB_DIR="$HOME/.cache/wallpaper_thumbs"
@@ -127,7 +127,6 @@ if [ -f "$selected_path" ]; then
         cp "$selected_path" ~/.cache/wall
         dunstify -i ~/.cache/wall -u low "Wallpaper Changed" "Wallpaper set to $(basename "$selected_path")"
 
-
         # magick "$selected_path"[0] -strip -resize 1000 -gravity center -extent 1000 -quality 90 "$HOME/.cache/wall.thmb"
         magick "$selected_path"[0] -strip -thumbnail 500x500^ -gravity center -extent 500x500 "$HOME/.cache/wall.sqre"
         magick "$selected_path"[0] -strip -scale 10% -blur 0x3 -resize 100% "$HOME/.cache/wall.blur"
@@ -157,4 +156,5 @@ else
     echo "Error: File not found - $selected_path"
     exit 1
 fi
-cp $HOME/.cache/wall.blur /usr/share/sddm/themes/catppuccin-mocha/backgrounds
+
+cp $HOME/.cache/wall.blur /usr/share/sddm/themes/$sddm_theme/backgrounds
