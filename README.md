@@ -32,9 +32,8 @@
 
 ## 🎬 Demo
 
-<p align="center">
-  <video src="./demo.mp4" autoplay loop muted playsinline style="max-width: 90%; border-radius: 10px; box-shadow: 0 0 10px #000;"></video>
-</p>
+[![Watch the demo](demo-thumbnail.jpg)](demo.mp4)
+
 
 ---
 
