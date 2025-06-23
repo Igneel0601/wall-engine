@@ -32,7 +32,7 @@
 
 ## 🎬 Demo
 
-[![Watch the demo](demo-thumbnail.jpg)](demo.mp4)
+[[![Watch the demo](demo-thumbnail.jpg)](demo.mp4)](https://github.com/user-attachments/assets/c7206550-2087-4355-9c97-80df83b2a0b5)
 
 
 ---
