@@ -8,7 +8,7 @@
 <p align="center"><strong>Dynamic Wallpaper Switcher with Live Wallpaper Support, SDDM Sync & Thumbnail Previews</strong></p>
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/your-preview.gif" width="700"/>
+  <img src="./preview.gif" width="700"/>
 </p>
 
 ---
