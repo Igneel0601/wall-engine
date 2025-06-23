@@ -1,4 +1,4 @@
-<h1 align="center">🧱 wall-engine</h1>
+<h1 align="center">wall-engine</h1>
 <p align="center">
   <img src="https://img.shields.io/badge/made%20for-ArchLinux-blue?style=flat-square" />
   <img src="https://img.shields.io/badge/wayland-ready-green?style=flat-square" />
