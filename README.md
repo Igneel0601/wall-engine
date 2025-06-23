@@ -34,6 +34,11 @@
 
 https://github.com/user-attachments/assets/1211269a-af95-453e-9a80-422e070de750
 
+---
+
+## 🎬 Walls
+
+![Image](https://github.com/user-attachments/assets/6c01149e-0a51-4913-832b-7ce684c59fe0)
 
 ---
 
@@ -50,9 +55,17 @@ Ensure the following tools are installed:
 | `ImageMagick`| Image processing               |
 | `dunstify`   | Notification popup             |
 
-Install via:
+## 🚀 Usage
 
 ```bash
-# Arch Linux
-sudo pacman -S rofi swww ffmpeg imagemagick dunst
-yay -S mpvpaper-git
+# Clone this repository
+git clone https://github.com/Igneel0601/wall-engine.git
+cd wall-engine
+
+# Copy the Rofi theme (optional, for prettier UI)
+cp selector2.rasi ~/.config/rofi/
+
+# Launch the wallpaper engine
+./wall2.sh
+
+
